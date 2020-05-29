@@ -43,6 +43,5 @@ stream.on('tweet', function (tweet) {
 
 })
 
-})
 
 

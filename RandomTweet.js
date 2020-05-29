@@ -4,26 +4,26 @@
   const T = new Twit(config)
   
   
-  function tweetit(msg){
-    //let random = Math.floor(Math.random()*100);
+  function tweetit(){
+    let random = Math.floor(Math.random()*100);
 
     const tweet ={
-      status: msg
+      status: 'random number ' + random + '  #coding'
     }
 
     console.log(tweet)
   
-    // T.post('statuses/update', tweet, function(err, data, response) {
-    //   if(err){
+    T.post('statuses/update', tweet, function(err, data, response) {
+      if(err){
         
-    //   console.log(err.message)
-    //   }
+      console.log(err.message)
+      }
 
-    //   else{
+      else{
         
-    //   console.log(`tweet tweeted is => ${data.text}`)
-    //   }
-    // })
+      console.log(`tweet tweeted is => ${data.text}`)
+      }
+    })
   }
 
   exports.tweetIt=tweetit;
