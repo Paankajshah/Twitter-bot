@@ -7,7 +7,7 @@ const fs = require('fs')
 const T = new Twit(config)
 
 
-//getTweets();
+setInterval(tweetIt, 5000);
 // tweetIt();
 // uploadImage();
 
@@ -33,15 +33,15 @@ const T = new Twit(config)
 //   console.log(msg);
 // })
 
-var stream = T.stream('statuses/filter', {follow : ['1233212540731174913'] });
-stream.on('tweet', function (tweet) {
+// var stream = T.stream('statuses/filter', {follow : ['1233212540731174913'] });
+// stream.on('tweet', function (tweet) {
 
- console.log(tweet.text)
- T.post('statuses/retweet/:id', { id: tweet.id_str }, function (err, data, response) {
-    console.log(data)
-  })
+//  console.log(tweet.text)
+//  T.post('statuses/retweet/:id', { id: tweet.id_str }, function (err, data, response) {
+//     console.log(data)
+//   })
 
-})
+// })
 
 
 
